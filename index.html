@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday Peach</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="content">
+        <button onclick="showModal()" id="happyBdayBtn" class="bday-btn">Happy Birthday! 🍑</button>
+        
+   
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p id="alertText"></p>
+            <button onclick="nextAlert()" id="okButton">OK</button>
+            <audio src="./assets/Taylor Swift - Blank Space (2).mp3" controls autoplay></audio>
+    </div>
+        </div>
+    </div>
+
+    <script>
+        var paragraphs = [
+            "Nice to meet you👋, where you been?\nI could show you incredible things.✨\nMagic, madness, heaven, sin,\nsaw you there and I thought:\n\"Oh, my God, look at that peach face.\nYou look like my next best friend.\nLife's a game, wanna play?🎲\"",
+            "New countries🌎, makeup💄, and parties💃.\nI can read you like a magazine.\nAin't it funny? Rumors fly.\nAnd I know you heard about me.\nSo hey, let's be friends.👯‍♀️\nI'm dying to see how this one ends.\nGrab your passport 🛩️and my hand.\nWe can make the bad guys good for a weekend😏.",
+            "So it's gonna be forever♾️.\nOr it's gonna go down in flames❤️‍🔥.\nYou can tell me when it's over, mm\nIf the high was worth the pain.\nWe will make a long list of great memories.\nThat'll prove we are insane.\n'Cause I know you love to travel🌎,\nand it's a passion we both share.💕",
+            "'Cause we're young and we're reckless.\nWe'll go to Portaventura.🎢\nWe'll see Rihanna🎶, mm.\nand we'll sing out hearts out🎤.\nWe'll live a lot of adventures.\nThat'll prove we are insane.\nI have a blank space on my arm, baby.\nAnd I'll write your name.",
+            "Live, laugh, love💖.\nI will show you incredible things.\nconcerts, puti vueltas.🍑\nWe are halfs of the same peach.🍑\nFind out what you want.\nBe that girl for a month.\nWait, the best is yet to come, oh, no.",
+            "Beauty, beast, perfect storms.\nI can make all the tables turn.\nRose garden filled with thorns.🌹🌹\nKeep you second guessing like:\n\"Oh, my God, who is she?\"\nI get drunk on Malibu🍹 (con piña).\nBut we'll come back every time one of us leaves.\n'Cause, ✨Darling✨, we are nightmares dressed like a daydream.",
+            "So it's gonna be forever♾️.\nAnd never gonna go down in flames❤️‍🔥.\nYou can tell me when it's over, mm.\nIf the high was worth the pain.\nwe got a long list of great memories.\nThat prove we are insane.\n'Cause they know we love to travel🌎\n to eat tacos and laugh 'til we're in pain.",
+            "'Cause we're are young and we're reckless.\nWe'll take that flight to Cancun🌴🥥.\nIt'll leave us breathless, mm.\nand with a pretty tan.\nGot a long list of great memories.\nThat prove we are insane.\nI had a blank space baby.\nAnd now I have a pinky promisse there.🤙",
+            "Boys only want love if it's torture.💀\nDon't say I didn't, say I didn't warn ya.\nBoys only want love if it's torture.\nDon't say I didn't, say I didn't warn ya.☠️",
+            "So it's gonna be forever.♾️\nAnd never gonna fade away.\nYou can tell me when we're older👵🏼👵🏼,\nif the memories light the way.\nWe got a long list of adventures,\nThat prove we're quite the pair👯‍♀️.\n'Cause they know we love to travel,\nand savor tacos without a care!🌮🌮",
+            "'Cause we're not that young, but still reckless.\nWe'll take this adventure to the stars💫.\nIt'll leave you breathless, mm.\nAnd with tales to recount at bars🥂.\nGot a long list of great memories.\nThat prove we are still insane.\nI had a blank space baby.\nAnd now I have a live, laugh, love there.💖"
+        ];
+
+        var index = 0;
+        var modal = document.getElementById("modal");
+        var alertText = document.getElementById("alertText");
+
+        function showModal() {
+            modal.style.display = "flex";
+            alertText.textContent = paragraphs[index];
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        function nextAlert() {
+            index++;
+            if (index < paragraphs.length) {
+                alertText.textContent = paragraphs[index];
+            } else {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
